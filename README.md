@@ -79,9 +79,8 @@ tiến hành: sudo make modules
 
 ![image](https://github.com/user-attachments/assets/bf04102c-f8e3-4c1a-bed1-dcba12d9894b)
 
-Chú ý module: ngx_http_modsecurity_module.so
-
-# ls objs
+# Chú ý module: ngx_http_modsecurity_module.so
+$ ls objs
 
 # Tạo thư mục modules
 mkdir /etc/nginx/modules
