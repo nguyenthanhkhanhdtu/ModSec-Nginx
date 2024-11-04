@@ -84,9 +84,13 @@ $ ls objs
 
 # Tạo thư mục modules
 mkdir /etc/nginx/modules
+
 cp objs/ngx_http_modsecurity_module.so /etc/nginx/modules
+
 nano /etc/nginx/nginx.conf
+
 thêm lệnh: load_module /etc/nginx/modules/ngx_http_modsecurity_module.so;
+
 lưu lại
 
 # Tải xuống core rule và đặt tên là modsecurity-crs
