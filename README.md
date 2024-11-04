@@ -1,4 +1,7 @@
-![image](https://github.com/user-attachments/assets/ab0864e6-fe8c-4fc3-8028-2fb11b264507)# ModSec-Nginx
+ #ModSec-Nginx
+ 
+![image](https://github.com/user-attachments/assets/ab0864e6-fe8c-4fc3-8028-2fb11b264507)
+
 # Cài đặt ModSec trên Ubuntu 20
 Đầu tiên : apt update && apt upgrade sau đó apt install nginx
 
@@ -51,17 +54,25 @@ tar -xzvf nginx-1.18.0.tar.gz
 
 # Kiểm tra phản hồi nginx và copy nội dung phản hồi đối số
 nginx -V
+
 ![image](https://github.com/user-attachments/assets/139071f3-7d20-4d02-bdd8-bb409d44690f)
 
 # compile the Modsecurity module
+
 cd nginx-1.18.0
+
 sudo ./configure --add-dynamic-module=../ModSecurity-nginx <nội dung phản hồi đối số>
+
 ví dụ : ![image](https://github.com/user-attachments/assets/b72f671f-ed09-4209-bd79-6499e1f5247e)
+
 Thành công : ![image](https://github.com/user-attachments/assets/9255676d-e510-4c3d-8516-052c9b097856)
+
 tiến hành: sudo make modules ![image](https://github.com/user-attachments/assets/440346bd-d5dc-4763-9045-2b4459b18503)
 
 # Kiểm tra /objs folder
+
 ![image](https://github.com/user-attachments/assets/bf04102c-f8e3-4c1a-bed1-dcba12d9894b)
+
 Chú ý module: ngx_http_modsecurity_module.so
 ls objs
 
@@ -85,22 +96,31 @@ mv modsecurity-crs /usr/local
 mkdir -p /etc/nginx/modsec
 
 # sao chép một vài tệp cấu hình vào thư mục này từ kho lưu trữ github modsecurity mặc định vào /etc/nginx/modsec
+
 cp  /opt/Modsecurity/unicode.mapping /etc/nginx/modsec
+
 ![image](https://github.com/user-attachments/assets/1d647492-e6c9-48a1-99e2-1c85f41beb0a)
 
 #  Turn on the SecRuleEngine, trong thư mục /etc/nginx/modsec/modsecurity.conf
+
 ![image](https://github.com/user-attachments/assets/01ae7feb-232e-466d-a53a-72116cc33fad)
 
 # make main.conf
+
 cd /etc/nginx/modsec 
+
 ![image](https://github.com/user-attachments/assets/ef47a1a1-7692-45e5-8435-9791c9092998)
+
 nano main.conf
+
 ![image](https://github.com/user-attachments/assets/d83495de-bb5e-40e5-a17c-624808d337ab)
+
 Include /etc/nginx/modsec/modsecurity.conf
 Include /usr/local/modsecurity-crs/crs-setup.conf
 Include /usr/local/modsecurity-crs/rules/*.conf
 
 # Tất cả file trong thư mục etc/nginx
+
 ![image](https://github.com/user-attachments/assets/7d0681c4-2342-4c37-979b-a3fbd16e4c50)
 
 # Thêm nội dung vào file /etc/nginx/sites-available/default đặt dưới  root /var/www/html;
