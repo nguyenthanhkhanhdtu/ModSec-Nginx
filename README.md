@@ -95,8 +95,11 @@ lưu lại
 
 # Tải xuống core rule và đặt tên là modsecurity-crs
 git clone https://github.com/coreruleset/coreruleset modsecurity-crs
+
 cd modsecurity-crs
+
 Rename lại file config : mv crs-setup.conf.example crs-setup.conf
+
 Rename REQUEST EXCLUSION RULES: mv rules/REQUEST-900-EXCLUSION-RULES-BEFORE-CRS.conf.example rules/REQUEST-900-EXCLUSION-RULES-BEFORE-CRS.conf
 
 # Di chuyển modsecurity-crs tới local
@@ -126,7 +129,9 @@ nano main.conf
 ![image](https://github.com/user-attachments/assets/d83495de-bb5e-40e5-a17c-624808d337ab)
 
 Include /etc/nginx/modsec/modsecurity.conf
+
 Include /usr/local/modsecurity-crs/crs-setup.conf
+
 Include /usr/local/modsecurity-crs/rules/*.conf
 
 # Tất cả file trong thư mục etc/nginx
@@ -134,7 +139,9 @@ Include /usr/local/modsecurity-crs/rules/*.conf
 ![image](https://github.com/user-attachments/assets/7d0681c4-2342-4c37-979b-a3fbd16e4c50)
 
 # Thêm nội dung vào file /etc/nginx/sites-available/default đặt dưới  root /var/www/html;
+
 modsecurity on;
+
 modsecurity_rules_file /etc/nginx/modsec/main.conf;
 
 # restart the nginx và done!
