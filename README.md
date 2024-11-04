@@ -21,17 +21,25 @@ sudo git submodule update
 ![image](https://github.com/user-attachments/assets/e039222f-c48c-412c-83c9-1325c13fa700)
 
 # Config
+
 ./configure
+
 ![image](https://github.com/user-attachments/assets/5a7aebb9-9fe1-4c71-b03c-67d4b0f7bd11)
+
 ![image](https://github.com/user-attachments/assets/fc9d6d54-150a-4ca2-9686-8d986f26cdf7)
 
 # Tiến hành Make
+
 make
+
 ![image](https://github.com/user-attachments/assets/0d63213e-292d-42c7-954c-91358321e4da)
+
 ![image](https://github.com/user-attachments/assets/d8397390-e7fb-402d-8dc4-fa47a47a1335)
 
 make install
+
 ![image](https://github.com/user-attachments/assets/c05d16b4-43bc-4ef0-a62b-df5be0caa998)
+
 ![image](https://github.com/user-attachments/assets/2af9ac62-b6f4-472c-91f9-3f858e5df605)
 
 # Cài đặt ModSecurity-NGINX-Connector
