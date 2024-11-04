@@ -17,6 +17,7 @@ sudo git submodule update
 
 # Start process
 ./build.sh
+
 ![image](https://github.com/user-attachments/assets/e039222f-c48c-412c-83c9-1325c13fa700)
 
 # Config
