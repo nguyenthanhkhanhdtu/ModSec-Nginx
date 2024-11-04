@@ -63,11 +63,17 @@ cd nginx-1.18.0
 
 sudo ./configure --add-dynamic-module=../ModSecurity-nginx <nội dung phản hồi đối số>
 
-ví dụ : ![image](https://github.com/user-attachments/assets/b72f671f-ed09-4209-bd79-6499e1f5247e)
+ví dụ : 
 
-Thành công : ![image](https://github.com/user-attachments/assets/9255676d-e510-4c3d-8516-052c9b097856)
+![image](https://github.com/user-attachments/assets/b72f671f-ed09-4209-bd79-6499e1f5247e)
 
-tiến hành: sudo make modules ![image](https://github.com/user-attachments/assets/440346bd-d5dc-4763-9045-2b4459b18503)
+Thành công : 
+
+![image](https://github.com/user-attachments/assets/9255676d-e510-4c3d-8516-052c9b097856)
+
+tiến hành: sudo make modules
+
+![image](https://github.com/user-attachments/assets/440346bd-d5dc-4763-9045-2b4459b18503)
 
 # Kiểm tra /objs folder
 
